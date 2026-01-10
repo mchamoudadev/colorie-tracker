@@ -2,7 +2,7 @@ import { zodResponseFormat } from "openai/helpers/zod";
 import { OpenAI } from "openai";
 import { z } from "zod";
 import dotenv from "dotenv";
-dotenv.config();
+import { config } from "../config/config.js";
 
 const FoodAnalysisSchema = z.object({
   foodName: z.string().describe("The name of the food"),
@@ -17,10 +17,10 @@ const FoodAnalysisSchema = z.object({
 
 type FoodAnalysisResult = z.infer<typeof FoodAnalysisSchema>;
 
-console.log("OPENAI_API_KEY:", process.env.OPENAI_API_KEY);
+
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: config.openaiApiKey,
 });
 
 export const analyzeFood = async (

@@ -8,6 +8,7 @@ import reportsRoutes from "./routes/reports.js";
 
 dotenv.config();
 
+import { config } from "./config/config.js";
 const app = express();
 
 connectDB();
@@ -42,7 +43,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(404).json({ message: "Route not found" });
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = config.port;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
