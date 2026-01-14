@@ -122,7 +122,7 @@ export const updateProfile = async (req: Request, res: Response): Promise<void> 
     try {
         const { name, dailyColorieGoal, onboardingCompleted } = req.body;
 
-        const user = await User.findById(req.user?._id);
+        const user = await User.findById(req.user?._id).select("-password");
 
         if(!user) {
           res.status(404).json({ message: "User not found" });

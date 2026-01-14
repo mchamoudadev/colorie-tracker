@@ -1,7 +1,7 @@
 import { zodResponseFormat } from "openai/helpers/zod";
 import { OpenAI } from "openai";
 import { z } from "zod";
-import dotenv from "dotenv";
+
 import { config } from "../config/config.js";
 
 const FoodAnalysisSchema = z.object({

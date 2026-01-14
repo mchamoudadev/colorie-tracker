@@ -1,3 +1,7 @@
+import dotenv from "dotenv";
+dotenv.config();
+
+
 export const config = {
     port: parseInt(process.env.PORT || "8000"),
     mongodbUri: process.env.NODE_ENV === "production" ? process.env.MONGODB_URI_PROD : process.env.MONGODB_URI_DEV,

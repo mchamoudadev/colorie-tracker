@@ -292,6 +292,8 @@ export const getDailySummary = async (
 
   // Populate meal breakdown
 
+  console.log("result", result);
+
   result.mealStats.forEach((meal:any) => {
 
     console.log("meal", meal);
