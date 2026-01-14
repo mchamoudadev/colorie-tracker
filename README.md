@@ -68,8 +68,8 @@ backend/
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd colorie-trucker-rec/backend
+git clone https://github.com/mchamoudadev/colorie-tracker.git
+cd colorie-tracker/backend
 ```
 
 2. **Install dependencies**
@@ -345,7 +345,7 @@ ISC
 
 ## 👤 Author
 
-Your Name
+mchamoudadev
 
 ## 🐛 Known Issues
 
